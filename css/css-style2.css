@@ -6,6 +6,11 @@
   border: 0;
 }
 
+@font-face {
+  font-family: CourierPrime;
+  src: url(/images/CourierPrime-Regular.ttf);
+}
+
 *,
 *:before,
 *:after {
