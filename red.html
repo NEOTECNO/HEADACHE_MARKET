@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> HEADACHE'S ARMY </title>
+    <meta name="description" content="HEADACHE'S ARMY">
+    <meta property="og:image" content="/img/other_tag.jpg">
+    <link rel="stylesheet" href="css/css-style.css">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <link rel="icon" href="./icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+
+                    <div class="header__logo">
+                        <img src="images/img-logo4.png" alt="logo site">
+                    </div>
+
+                    <!--
+                    <div class="header__logo2">
+                        HEADACHE'S ARMY
+                    </div>
+                    -->
+
+                    <div class="header__center">
+                        <a href="https://etherscan.io/address/0x5b0d643def5fa4b07c37dc5e5c9faacc0e1422ea" target="_blank" class="head-etherscan"></a>
+                        <a href="https://opensea.io/collection/dogliens" target="_blank" class="head-opensea"></a>
+                        <a href="https://twitter.com/DOGLIENS" target="_blank" class="head-twitter"></a>
+                        <a href="https://discord.gg/DOGLIENS" target="_blank" class="head-discord"></a>
+                    </div>
+
+                    <div class="header__right">
+                        <button class="btn-head" id="connect_button"> Connect wallet </button>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <div class="main2">
+            <div class="container">
+                <div class="main__row">
+
+                    <div class="main_left_2">
+
+                        <div class="form-row-top">
+
+                            <div class="form-row-top-left">
+                                <p class="form-text"> HEADACHE ARMY DELIVERED </p> 
+                                <p class="number" id="tokens_available"> CONNECT </p> 
+                                <p class="form-text-3" id="phase"> HEADACHE'S ARMY IS HERE! </p> 
+                                <p class="form-text-3" id="price"> COST 300 DISC + ETH EACH </p>
+                                <p class="form-text-3" id="disc_balance"> DISC BALANCE: </p>
+                                <p class="form-text-3" id="key_balance"> KEY BALANCE: </p>
+                            </div>
+
+                            <div class="form-row-top-right">
+                                <img src="images/red_box.png">
+                            </div>
+
+                        </div>
+
+                        <div class="form-row-amount">
+                            <button class="btn-2" id="mintDW" onClick="decrementMintAmount()"> - </button>
+                                <input type="text" placeholder="max 5 per transaction" class="in-form js-in-number" id="tokens_amount">
+                            <button class="btn-2" id="mintUP" onClick="incrementMintAmount()"> + </button>
+                        </div>
+
+                        <div class="form-row">
+
+                            <div class="form-row-mint">
+                                <button class="btn-form" id="mint_common_headache"> HEADACHE'S ARMY (.05 ETH) </button>
+                                <button class="btn-form-gold" id="mint_extra_headache"> HEADACHE'S ARMY W/KEY (.05 ETH) </button>
+                                (Only use this option if you have been sent a Extra Key)
+                                <!--
+                                <button class="btn-form" id="mint_full_eth_headache"> FULL ETH </button>
+                                -->
+                            </div>
+
+                        </div>
+                            
+                        <div class="form-row-text">
+                            <div class="form-text">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__row">
+                    <div class="text-center copyright">
+                        <span> © 2022 DOGLIENS. All rights reserved </span>
+                      </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+	<script src="js_2/dist-web3.min.js"></script>
+    <script src="js_2/7663-js-sale.js"></script>
+    <script src="js_2/8305-js-main.js"></script>
+
+</body>
+
+</html>
