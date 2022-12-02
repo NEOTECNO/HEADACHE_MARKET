@@ -428,17 +428,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: CourierPrime;
   font-size: 48px;
-  color: #00ff00;
-  filter: drop-shadow(0px 0px 3px #79ff80);
-  -webkit-filter: drop-shadow(0px 0px 3px #79ff80);
+  font-weight: 700;
+  color: #ff0000;
 }
 
 .typed-cursor {
-  font-size: 42px;
-  color: #00ff00;
-  filter: drop-shadow(0px 0px 4px #79ff80);
-  -webkit-filter: drop-shadow(0px 0px 4px #79ff80);
+  font-family: CourierPrime;
+  font-size: 48px;
+  font-weight: 700;
+  color: #ff0000;
 }
 
 .header__center {
