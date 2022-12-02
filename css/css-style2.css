@@ -1209,6 +1209,18 @@ textarea.error {
     margin-bottom: 10px;
   }
 
+  .header__logo2{
+    font-size: 18px;
+  }
+
+  .typed-cursor {
+    font-size: 18px;
+  }
+
+  .header__row2 {
+    width: 100vw;
+  }
+
   .header__right {
     flex-direction: column;
   }
@@ -1246,6 +1258,39 @@ textarea.error {
     align-items: center;
     display: flex;
   }
+
+  .main_row_3 {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    background-image: url('/images/market_1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .landing-btn-left {
+    display: flex;
+    position: absolute;
+    justify-self: center;
+    right: 10px;
+    border-width: 2px;
+    text-align: center;
+    font-size: large;
+    padding: 20px 50px;
+    }
+
+    .landing-btn-right {
+      display: flex;
+      position: absolute;
+      justify-self: center;
+      left: 10px;
+      border-width: 2px;
+      text-align: center;
+      font-size: large;
+      padding: 20px 50px;
+      }
 
   .main_left_2 {
     display: flex;
