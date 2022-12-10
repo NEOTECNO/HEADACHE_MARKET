@@ -21,6 +21,7 @@ var contract3 = null;
 var price = null;
 
 var totalSupply = null;
+var doglienID = null;
 var maxSupply = null;
 var maxPerTx = null;
 var PM = null;
@@ -69,8 +70,10 @@ const get_key_balance = async (e)=> {
   	  		const web3 = new Web3(window.ethereum);
 			contract3 = new web3.eth.Contract(abi_staking, CONTRACT_STAKING, {gas: 30000000});
 			var key_balance = await contract3.methods.EXTRA_KEYS(account).call();
+			doglienID = await contract3.methods.doglienID().call();
 
 			document.getElementById("key_balance").innerHTML = "KEY BALANCE: " + key_balance;
+			document.getElementById("tokens_available").innerHTML = (doglienID - 1) + " / " + maxSupply;
 			}
   		}
   	return false;
@@ -112,7 +115,7 @@ const claim_doglien = async (e)=> {
           		{
           	alert("Error: " + e.message);
           	console.log("Error: ",e);
-          	document.getElementById("tokens_available").innerHTML = totalSupply + " / " + "2000";
+          	document.getElementById("tokens_available").innerHTML = (doglienID - 1) + " / " + maxSupply;
           	}
         }
     }     
@@ -143,7 +146,7 @@ const claim_extra_doglien = async (e)=> {
 				{
 			alert("Error: " + e.message);
 			console.log("Error: ",e);
-			document.getElementById("tokens_available").innerHTML = totalSupply + " / " + "2000";
+			document.getElementById("tokens_available").innerHTML = (doglienID - 1) + " / " + maxSupply;
 			}
 	  	}
   	}     
@@ -174,7 +177,7 @@ const connect = async (e)=> {
 	  	}
 
     		//document.getElementById("tokens_available").innerHTML = "SOLD OUT";
-	  	document.getElementById("tokens_available").innerHTML = totalSupply + " / " + maxSupply;
+	  	//document.getElementById("tokens_available").innerHTML = totalSupply + " / " + maxSupply;
     		//document.getElementById('tokens_amount').value = maxPerTx;
 	  	}
 		else { document.getElementById("connect_button").innerHTML = "Connect wallet"; }
