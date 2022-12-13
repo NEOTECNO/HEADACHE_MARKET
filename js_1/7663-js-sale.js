@@ -315,9 +315,9 @@ const connect = async (e)=> {
 	maxPerTx = await contract1.methods.MaxperTx().call();
 	price = await contract1.methods.cost().call();
 
-      	if (paused) { document.getElementById("phase").innerHTML = "CONTRACT IS PAUSED"; }
-	  	else { if (DM) {document.getElementById("phase").innerHTML = "DAPP MINT | MAX " + maxPerTx + " PER WALLET"; }
-	  	else {document.getElementById("phase").innerHTML = "PUBLIC MINT | MAX " + maxPerTx + " PER WALLET"; }
+      	if (paused) { document.getElementById("phase").innerHTML = "DAPP MINT | MAX " + maxPerTx + " PER TX"; }
+	  	else { if (DM) {document.getElementById("phase").innerHTML = "DAPP MINT | MAX " + maxPerTx + " PER TX"; }
+	  	else {document.getElementById("phase").innerHTML = "PUBLIC MINT | MAX " + maxPerTx + " PER TX"; }
 	  	}
 
     		//document.getElementById("tokens_available").innerHTML = "SOLD OUT";
