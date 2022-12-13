@@ -402,4 +402,4 @@ connect();
 
 document.getElementById('mint_common_headache').onclick = mint_common_headache;
 document.getElementById('mint_extra_headache').onclick = mint_extra_headache;
-//document.getElementById('mint_full_eth_headache').onclick = mint_full_eth_headache;
+document.getElementById('mint_full_eth_headache').onclick = mint_full_eth_headache;
