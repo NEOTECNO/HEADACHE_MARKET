@@ -337,5 +337,5 @@ document.getElementById('connect_button').onclick = connect;
 
 connect();
 
-document.getElementById('claim_doglien').onclick = claim_doglien;
+//document.getElementById('claim_doglien').onclick = claim_doglien;
 document.getElementById('claim_extra_doglien').onclick = claim_extra_doglien;
