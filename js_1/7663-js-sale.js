@@ -315,9 +315,9 @@ const connect = async (e)=> {
 	maxPerTx = await contract1.methods.MaxperTx().call();
 	price = await contract1.methods.cost().call();
 
-      	if (paused) { document.getElementById("phase").innerHTML = "DAPP MINT | MAX " + maxPerTx + " PER TX"; }
-	  	else { if (DM) {document.getElementById("phase").innerHTML = "DAPP MINT | MAX " + maxPerTx + " PER TX"; }
-	  	else {document.getElementById("phase").innerHTML = "PUBLIC MINT | MAX " + maxPerTx + " PER TX"; }
+      	if (paused) { document.getElementById("phase").innerHTML = "DAPP MINT | MAX 1 CLAIM PER TX"; }
+	  	else { if (DM) {document.getElementById("phase").innerHTML = "DAPP MINT | MAX 1 CLAIM PER TX"; }
+	  	else {document.getElementById("phase").innerHTML = "PUBLIC MINT | MAX 1 CLAIM PER TX"; }
 	  	}
 
     		//document.getElementById("tokens_available").innerHTML = "SOLD OUT";
