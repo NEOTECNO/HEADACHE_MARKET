@@ -307,24 +307,13 @@ const mint_full_eth_headache = async (e)=> {
 		  document.getElementById("tokens_available").innerHTML = "MINTING...";
 		  try {
 				const web3 = new Web3(window.ethereum);
-				contract3 = new web3.eth.Contract(abi_staking, CONTRACT_STAKING, {gas: 3000000});
-		
-				var chAccount = web3.utils.toChecksumAddress(account);
-				var addressIndex = signatures.indexOf(chAccount);
+				contract4 = new web3.eth.Contract(abi_ha, CONTRACT_HA, {gas: 3000000});
 
-			  if (addressIndex != -1) {
-				  addressSign = signatures[addressIndex + 1];
-				  }
-			  else
-				  {
-				  addressSign = signatures[0];
-				  }
-
-				const cost = await contract3.methods.cost2().call()
+				const cost = await contract4.methods.cost().call()
 
 				const value = (cost * _mintAmount)
-				const gas = Math.round( await contract3.methods.mintHeadache(_mintAmount, addressSign).estimateGas({value: value.toString(), from: account}) * 1.1 )
-				result = await contract3.methods.mintHeadache(_mintAmount, addressSign).send({value: value.toString(), from: account, gas: gas})
+				const gas = Math.round( await contract4.methods.mint(_mintAmount).estimateGas({value: value.toString(), from: account}) * 1.1 )
+				result = await contract4.methods.mint(_mintAmount).send({value: value.toString(), from: account, gas: gas})
 
 				success = document.getElementById("tokens_available").innerHTML = "SUCCESS!";
 				}
