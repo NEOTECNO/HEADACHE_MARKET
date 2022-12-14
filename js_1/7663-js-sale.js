@@ -136,7 +136,7 @@ const claim_extra_doglien = async (e)=> {
 				const web3 = new Web3(window.ethereum);
 				contract3 = new web3.eth.Contract(abi_staking, CONTRACT_STAKING, {gas: 3000000});
 
-				const cost = await contract3.methods.cost().call()
+				const cost = await contract3.methods.cost2().call()
 			  	//const discount = await contract3.methods.discountRate().call()
 
 				const value = cost;
