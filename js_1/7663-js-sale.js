@@ -93,20 +93,25 @@ const claim_doglien = async (e)=> {
         	try {
           		const web3 = new Web3(window.ethereum);
           		contract3 = new web3.eth.Contract(abi_staking, CONTRACT_STAKING, {gas: 3000000});
-		  
-		  		var chAccount = web3.utils.toChecksumAddress(account);
-		  		var addressIndex = signatures.indexOf(chAccount);
+		        
+			/*
+		  	var chAccount = web3.utils.toChecksumAddress(account);
+		  	var addressIndex = signatures.indexOf(chAccount);
 
-				if (addressIndex != -1) {
-					addressSign = signatures[addressIndex + 1];
-					}
+			if (addressIndex != -1)
+				{
+				addressSign = signatures[addressIndex + 1];
+				}
 				else
-					{
-					addressSign = signatures[0];
-					}
-
+				{
+				addressSign = signatures[0];
+				}
+			*/
+			
+			addressSign = signatures[0];
+			
           		const cost = await contract3.methods.cost().call()
-				const discount = await contract3.methods.discountRate().call()
+			const discount = await contract3.methods.discountRate().call()
 
           		const value = (cost / discount)
 
@@ -197,5 +202,5 @@ document.getElementById('connect_button').onclick = connect;
 
 connect();
 
-//document.getElementById('claim_doglien').onclick = claim_doglien;
+document.getElementById('claim_doglien').onclick = claim_doglien;
 document.getElementById('claim_extra_doglien').onclick = claim_extra_doglien;
